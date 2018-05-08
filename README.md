@@ -1,4 +1,10 @@
 # websocket-chatroom
 
-1. npm install  nodejs-websocket
-2. node wsServer.js
+
+
+### chatRoom
+* h5 websocket api
+* nodejs websocket server
+
+### chatRoom_s
+*socket.io
