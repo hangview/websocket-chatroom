@@ -3,7 +3,6 @@ var PORT = 3000
 
 var clientCount = 0;
 var mes = {};
-// Scream server example: "hi" -> "HI!!!"
 var server = ws.createServer(function (conn) {
     console.log("New connection")
     clientCount++;
@@ -14,7 +13,7 @@ var server = ws.createServer(function (conn) {
     conn.on("text", function (str) {
         console.log("Received "+str)
         mes.type = 'message';
-        mes.data = conn.nickName +'  says：' + str;
+        mes.data = conn.nickName +'（'+new Date().getHours() + ':' + new Date().getMinutes() +':'+new Date().getSeconds() +'）：' + str;
         broadcast(JSON.stringify(mes));
     })
     conn.on("close", function (code, reason) {
