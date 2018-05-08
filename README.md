@@ -7,4 +7,4 @@
 * nodejs websocket server
 
 ### chatRoom_s
-*socket.io
+* socket.io
